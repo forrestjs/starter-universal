@@ -2,7 +2,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Give us a star on GitHub!](https://github.com/marcopeg/forrest-starter-universal)
+* [Give us a star on GitHub!](https://github.com/forrestjs/core)
 * [Install from NPM](./pages/en/install.md)
 
 # Features

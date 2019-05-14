@@ -36,6 +36,7 @@
     "book:install": "node_modules/.bin/gitbook install",
     "book:serve": "node_modules/.bin/gitbook serve",
     "book:build": "node_modules/.bin/gitbook build . docs",
+    "book:publish": "npm run book:install && npm run book:build && git add ./docs && git commit -m \"gitbook\" && git push",
     "book": "npm run book:install && npm run book:serve",
     "----- // DEPLOY - HEROKU // -----": "",
     "heroku-postbuild": "npm run build:all",
