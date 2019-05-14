@@ -1,0 +1,22 @@
+# gitignored folders
+node_modules
+build
+build-src
+build-ssr
+build-locale
+
+# other stuff
+Makefile
+README.md
+SUMMARY.md
+LICENCE.md
+package-lock.json
+_book
+docs
+
+# local environment files
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+

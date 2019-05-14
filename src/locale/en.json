@@ -1,0 +1,12 @@
+{
+    "app.subtitle": "Go to `react-ssr` documentation",
+    "app.description": "Edit <code>src/App.js</code> and save to reload.",
+    "locale.it": "Italiano",
+    "locale.en": "English",
+    "pages.lang.en": "Leggi i contenuti in lingua Italiana",
+    "pages.lang.it": "Read the English contents",
+    "pages.listTitle": "Available Features",
+    "pages.goToHome": "&laquo; Go to Home Page",
+    "pages.goToMenu": "&laquo; Go to the menu",
+    "pages.notFound": "404 - Page not found"
+}

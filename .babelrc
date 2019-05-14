@@ -1,0 +1,24 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [ "module-resolver", { "root": ["src", "ssr", "."] } ],
+        [ "react-intl", { "messagesDir": "./build-locale/messages/" } ],
+        "babel-plugin-dynamic-import-node-babel-7",
+        "babel-plugin-styled-components",
+        "react-loadable/babel",
+        "@babel/plugin-proposal-class-properties"
+    ],
+    "env": {
+        "node": {
+            "plugins": [
+                [
+                    "babel-plugin-transform-require-ignore",
+                    { "extensions": [ ".css", ".less", ".sass", ".styl" ] }
+                ]
+            ]
+        }
+    }
+}

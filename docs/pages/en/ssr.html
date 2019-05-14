@@ -1,0 +1,399 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Server Side Rendering · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Server side rendering makes your app fully indexed by search engines">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="seo.html" />
+    
+    
+    <link rel="prev" href="install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <a target="_blank" href="https://github.com/marcopeg/forrest-starter-universal">
+            
+                    
+                    Give us a star on GitHub!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    Install from NPM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="ssr.html">
+            
+                <a href="ssr.html">
+            
+                    
+                    Server Side Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="seo.html">
+            
+                <a href="seo.html">
+            
+                    
+                    Search Engine Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="intl.html">
+            
+                <a href="intl.html">
+            
+                    
+                    Internationalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="styleguide.html">
+            
+                <a href="styleguide.html">
+            
+                    
+                    Styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="gitbook.html">
+            
+                <a href="gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="pages.html">
+            
+                <a href="pages.html">
+            
+                    
+                    Markdown Contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Server Side Rendering</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="server-side-rendering">Server Side Rendering</h1>
+<p>SSR is a critical feature for any modern web application.</p>
+<p>We implement it thanks to <a href="https://marcopeg.com/react-ssr" target="_blank">react-ssr</a> because we tried
+other solutions like <a href="https://nextjs.org/" target="_blank">NextJS</a> and we think there are few points
+that are left unsolved:</p>
+<ol>
+<li>Progressive loading in the client</li>
+<li>Nested data loading</li>
+<li>Component based routing - <a href="https://reacttraining.com/react-router" target="_blank">react-router</a></li>
+<li>Dynamically opt out SSR</li>
+</ol>
+<hr>
+<h2 id="progressive-loading-in-the-client">Progressive loading in the client</h2>
+<p><strong>You should never freeze the user experience waiting from data to be loaded.</strong>
+Instead you want to run spinners, loaders and funny text messages Slack style.</p>
+<p>In the server - on the other hands - you must await all the data in order to
+produce a complete HTML response.</p>
+<p>While <em>NextJS</em> choose to await all the data in any circumstance, <em>ForrestJS</em>
+handles the client and server situations in 2 different ways, under the hood,
+without you noticing (if you don&apos;t want to).</p>
+<h2 id="nested-data-loading">Nested data loading</h2>
+<p>A React application is composable by nature. While is not a top-notch best practice
+to nest containers inside components, we think <strong>you are smart enough</strong> to understand
+when it is worth to introduce an exception to the rule.</p>
+<p>While <em>NextJS</em> asks you to load any piece of data at each page&apos;s root componet,
+<strong><em>ForrestJS</em> leaves the decision open</strong> to your specific needs.</p>
+<p>You can choose to load everything at the top and implement a tree of pure components,
+which we suggest, or <strong>you can decide to deep nest a container</strong> that is in charge of
+loading it&apos;s own specific data.</p>
+<p>The SSR will kindly await all your data requests no matter what.</p>
+<h2 id="component-based-routing">Component based routing</h2>
+<p>If there are two projects that made the React&apos;s world a better place are:</p>
+<ul>
+<li><a href="https://reacttraining.com/react-router" target="_blank">react-router</a></li>
+<li><a href="https://www.npmjs.com/package/react-loadable" target="_blank">react-loadable</a></li>
+</ul>
+<p>Together they allow do declaratively structure your application in smaller portions,
+at any level deep in the rendering tree.</p>
+<p>While <em>NextJS</em> and <em>GatsbyJS</em> implement a <strong>page based routing</strong> (which is important
+for static website genaration, which we don&apos;t support), <em>ForrestJS</em> let you handle
+the routing and the code splitting the way you see it better.</p>
+<p>You don&apos;t really have to have a router at all, or you can implement your own.
+<em>ForrestJS</em> doesn&apos;t make the decision for you, and in this starter we decided to go
+for <em>react-router</em>.</p>
+<h2 id="dynamically-opt-out-ssr">Dynamically opt out SSR</h2>
+<p>Let&apos;s face it: SSR hits on our servers&apos; CPU.</p>
+<p>While it is critical to <strong>serve the fastest possible content</strong> to a first comer
+and Google bots, you may want to serve a pure client side app to a returning visitor
+or a private area.</p>
+<p>There is no real point in SSR rendering a piece of the app that is behind login, right?</p>
+<p><em>ForrestJS</em> let you implement a custom logic to decide, route by route, whether to SSR or not:</p>
+<pre><code>// ssr/boot.js
+
+...
+shouldRender: req =&gt; res.session === null
+...
+</code></pre><p>This simple example will SSR all the anonymous sessions, and let the client rendering
+take over for any authenticated session.</p>
+<p>Simple, right?</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: Install from NPM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="seo.html" class="navigation navigation-next " aria-label="Next page: Search Engine Optimization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"slug":"ssr","title":"Server Side Rendering","description":"Server side rendering makes your app fully indexed by search engines","keywords":"ssr, server, side, rendering","level":"2.1","depth":1,"next":{"title":"Search Engine Optimization","level":"2.2","depth":1,"path":"pages/en/seo.md","ref":"./pages/en/seo.md","articles":[]},"previous":{"title":"Install from NPM","level":"1.3","depth":1,"path":"pages/en/install.md","ref":"./pages/en/install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/en/ssr.md","mtime":"2019-05-14T08:52:26.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-14T09:22:35.820Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

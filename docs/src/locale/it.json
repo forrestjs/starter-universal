@@ -1,0 +1,12 @@
+{
+  "app.subtitle": "Vai alla documentazione di `react-ssr`",
+  "app.description": "Modifica <code>src/App.js</code> e salva per aggiornare la pagina.",
+  "locale.it": "Italiano",
+  "locale.en": "English",
+  "pages.lang.en": "Leggi i contenuti in lingua Italiana",
+  "pages.lang.it": "Read the English contents",
+  "pages.goToMenu": "&laquo; Vai al menu",
+  "pages.notFound": "404 - Pagina non trovata",
+  "pages.listTitle": "Pagine Disponibili",
+  "pages.goToHome": "&laquo; Vai alla Home Page"
+}
