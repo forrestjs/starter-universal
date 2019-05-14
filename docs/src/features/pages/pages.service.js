@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { runQuery } from '@marcopeg/react-ssr/features/network'
+import { runQuery } from '@forrestjs/core/features/network'
 import {
     loadStart,
     loadFailed,

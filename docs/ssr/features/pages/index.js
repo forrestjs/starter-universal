@@ -1,7 +1,7 @@
 import path from 'path'
 import express from 'express'
 import { START_FEATURES } from '@marcopeg/hooks'
-import { EXPRESS_GRAPHQL, EXPRESS_MIDDLEWARE } from '@marcopeg/react-ssr/services/express/hooks'
+import { EXPRESS_GRAPHQL, EXPRESS_MIDDLEWARE } from '@forrestjs/core/services/express/hooks'
 import { FEATURE_NAME } from './hooks'
 import { watchPages } from './lib/watch-pages'
 

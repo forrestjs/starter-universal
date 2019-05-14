@@ -10,7 +10,7 @@
  */
 
 import chokidar from 'chokidar'
-import { invalidateCache as dropSSR } from '@marcopeg/react-ssr/lib/memcached'
+import { invalidateCache as dropSSR } from '@forrestjs/core/lib/memcached'
 import { invalidateCache as dropPages } from './list-pages'
 
 export const watchPages = (sourcePath) =>

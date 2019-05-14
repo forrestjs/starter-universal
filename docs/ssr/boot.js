@@ -79,14 +79,14 @@ process.env.NODE_ENV === 'development' && registerAction({
 export default createHookApp({
     settings: {},
     services: [
-        require('@marcopeg/react-ssr/services/env'),
-        require('@marcopeg/react-ssr/services/logger'),
-        require('@marcopeg/react-ssr/services/locale'),
-        require('@marcopeg/react-ssr/services/express'),
-        require('@marcopeg/react-ssr/services/express/cookie-helper'),
-        require('@marcopeg/react-ssr/services/express/locale'),
-        require('@marcopeg/react-ssr/services/express/graphql'),
-        require('@marcopeg/react-ssr/services/express/ssr'),
+        require('@forrestjs/core/services/env'),
+        require('@forrestjs/core/services/logger'),
+        require('@forrestjs/core/services/locale'),
+        require('@forrestjs/core/services/express'),
+        require('@forrestjs/core/services/express/cookie-helper'),
+        require('@forrestjs/core/services/express/locale'),
+        require('@forrestjs/core/services/express/graphql'),
+        require('@forrestjs/core/services/express/ssr'),
     ],
     features: [
         require('./features/pages'),

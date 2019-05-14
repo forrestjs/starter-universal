@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SetLocaleLink as Link } from '@marcopeg/react-ssr/features/locale'
+import { SetLocaleLink as Link } from '@forrestjs/core/features/locale'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`

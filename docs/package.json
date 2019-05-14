@@ -26,7 +26,7 @@
     "----- // SSR BUILD // -----": "",
     "build:src": "NODE_ENV=production ./node_modules/.bin/babel src --out-dir ./build-src --copy-files",
     "build:ssr": "NODE_ENV=production ./node_modules/.bin/babel ssr --out-dir ./build-ssr",
-    "build:locale": "NODE_ENV=development BABEL_ENV=node ./node_modules/.bin/babel src --out-dir ./build-locale && node ./node_modules/@marcopeg/react-ssr/lib/react-intl-pack.js",
+    "build:locale": "NODE_ENV=development BABEL_ENV=node ./node_modules/.bin/babel src --out-dir ./build-locale && node ./node_modules/@forrestjs/core/lib/react-intl-pack.js",
     "build:node": "npm run build:src && npm run build:ssr",
     "build:all": "npm run build && npm run build:node && npm run build:locale",
     "----- // STYLEGUIDIST // -----": "",
@@ -54,7 +54,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@marcopeg/hooks": "^0.2.2",
-    "@marcopeg/react-ssr": "^0.3.5",
+    "@forrestjs/core": "^0.0.2",
     "@marcopeg/utils": "^2.0.1",
     "async": "^2.6.2",
     "chokidar": "^3.0.0",

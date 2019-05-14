@@ -10,7 +10,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router-dom'
-import { LocaleProvider } from '@marcopeg/react-ssr/features/locale'
+import { LocaleProvider } from '@forrestjs/core/features/locale'
 
 // project specific modules
 import * as serviceWorker from './serviceWorker'

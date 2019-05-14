@@ -18,7 +18,7 @@ then open:
 
 ## What do I get?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [react-ssr](https://marcopeg.github.io/react-ssr).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [ForrestJS](https://forrestjs.github.io).
 
 You can quickly start to build a **universal web app** with:
 

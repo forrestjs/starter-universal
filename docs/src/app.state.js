@@ -1,4 +1,4 @@
-import createSSRState from '@marcopeg/react-ssr/lib/create-ssr-state'
+import createSSRState from '@forrestjs/core/lib/create-ssr-state'
 import app from './app.reducer'
 
 const reducers = {
@@ -6,9 +6,9 @@ const reducers = {
 }
 
 const features = [
-    require('@marcopeg/react-ssr/features/storage'),
-    require('@marcopeg/react-ssr/features/network'),
-    require('@marcopeg/react-ssr/features/locale'),
+    require('@forrestjs/core/features/storage'),
+    require('@forrestjs/core/features/network'),
+    require('@forrestjs/core/features/locale'),
     require('features/locale'),
     require('features/pages'),
 ]

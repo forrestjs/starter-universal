@@ -11,8 +11,8 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { StaticRouter } from 'react-router-dom'
-import { createSSRRender } from '@marcopeg/react-ssr/lib/create-ssr-render'
-import { LocaleProvider } from '@marcopeg/react-ssr/features/locale'
+import { createSSRRender } from '@forrestjs/core/lib/create-ssr-render'
+import { LocaleProvider } from '@forrestjs/core/features/locale'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 
 // project specific modules
