@@ -41,6 +41,8 @@ registerAction({
     handler: async ({ settings }) => {
         settings.express = {
             ssr: {
+                disableJs: 'yes',
+                useCache: 'no',
                 // multilanguage cache policy
                 shouldCache: (req) => (req.query.locale === undefined),
                 getCacheKey: (req) => ({ value: [ req.url, req.locale.language, req.locale.region ] }),
@@ -79,14 +81,13 @@ process.env.NODE_ENV === 'development' && registerAction({
 export default createHookApp({
     settings: {},
     services: [
-        require('@forrestjs/core/services/env'),
-        require('@forrestjs/core/services/logger'),
-        require('@forrestjs/core/services/locale'),
-        require('@forrestjs/core/services/express'),
-        require('@forrestjs/core/services/express/cookie-helper'),
-        require('@forrestjs/core/services/express/locale'),
-        require('@forrestjs/core/services/express/graphql'),
-        require('@forrestjs/core/services/express/ssr'),
+        require('@forrestjs/service-env'),
+        require('@forrestjs/service-logger'),
+        require('@forrestjs/service-express'),
+        require('@forrestjs/service-express-cookies'),
+        require('@forrestjs/service-express-graphql'),
+        require('@forrestjs/service-express-ssr'),
+        require('@forrestjs/feature-locale'),
     ],
     features: [
         require('./features/pages'),

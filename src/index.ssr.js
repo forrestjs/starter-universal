@@ -12,7 +12,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { StaticRouter } from 'react-router-dom'
 import { createSSRRender } from '@forrestjs/core/lib/create-ssr-render'
-import { LocaleProvider } from '@forrestjs/core/features/locale'
+import { LocaleProvider } from '@forrestjs/feature-locale/client'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 
 // project specific modules

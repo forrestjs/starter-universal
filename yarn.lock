@@ -378,7 +378,7 @@
     "@babel/helper-create-class-features-plugin" "^7.4.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-proposal-class-properties@^7.4.4":
+"@babel/plugin-proposal-class-properties@^7.0.0":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.4.4.tgz#93a6486eed86d53452ab9bab35e368e9461198ce"
   integrity sha512-WjKTI8g8d5w1Bc9zgwSz2nfrsNQsXcCf9J9cdCvrJV6RF56yztwm4TmJC0MgJ9tvwO9gUA/mcYe89bLdGfiXFg==
@@ -426,6 +426,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-optional-catch-binding" "^7.2.0"
+
+"@babel/plugin-proposal-optional-chaining@^7.0.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.2.0.tgz#ae454f4c21c6c2ce8cb2397dc332ae8b420c5441"
+  integrity sha512-ea3Q6edZC/55wEBVZAEz42v528VulyO0eir+7uky/sT4XRcdkWJcFi1aPtitTlwUzGnECWJNExWww1SStt+yWw==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-optional-chaining" "^7.2.0"
 
 "@babel/plugin-proposal-unicode-property-regex@^7.4.0":
   version "7.4.0"
@@ -498,6 +506,13 @@
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.2.0.tgz#a94013d6eda8908dfe6a477e7f9eda85656ecf5c"
   integrity sha512-bDe4xKNhb0LI7IvZHiA13kff0KEfaGX/Hv4lMA9+7TEc63hMNvfKo6ZFpXhKuEp+II/q35Gc4NoMeDZyaUbj9w==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-syntax-optional-chaining@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-chaining/-/plugin-syntax-optional-chaining-7.2.0.tgz#a59d6ae8c167e7608eaa443fda9fa8fa6bf21dff"
+  integrity sha512-HtGCtvp5Uq/jH/WNUPkK6b7rufnCPLLlDAFN7cmACoIjaOOiXxUt3SswU5loHqrhtqTsa/WoLQ1OQ1AGuZqaWA==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
@@ -642,6 +657,14 @@
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.4.0.tgz#f3c59eecff68c99b9c96eaafe4fe9d1fa8947138"
   integrity sha512-C4ZVNejHnfB22vI2TYN4RUp2oCmq6cSEAg4RygSvYZUECRqUu9O4PMEMNJ4wsemaRGg27BbgYctG4BZh+AgIHw==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-flow" "^7.2.0"
+
+"@babel/plugin-transform-flow-strip-types@^7.0.0":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.4.4.tgz#d267a081f49a8705fc9146de0768c6b58dccd8f7"
+  integrity sha512-WyVedfeEIILYEaWGAUWzVNyqG4sfsNooMhXWsu/YzOvVGcsnPb5PguysjJqI3t3qiaYj0BR8T2f5njdjTGe44Q==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-flow" "^7.2.0"
@@ -872,6 +895,16 @@
     resolve "^1.8.1"
     semver "^5.5.1"
 
+"@babel/plugin-transform-runtime@^7.0.0":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.4.4.tgz#a50f5d16e9c3a4ac18a1a9f9803c107c380bce08"
+  integrity sha512-aMVojEjPszvau3NRg+TIH14ynZLvPewH4xhlCW1w6A3rkxTS1m4uwzRclYR9oS+rl/dr+kT+pzbfHuAWP/lc7Q==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    resolve "^1.8.1"
+    semver "^5.5.1"
+
 "@babel/plugin-transform-shorthand-properties@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-shorthand-properties/-/plugin-transform-shorthand-properties-7.2.0.tgz#6333aee2f8d6ee7e28615457298934a3b46198f0"
@@ -1005,7 +1038,7 @@
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
 
-"@babel/preset-env@^7.4.4":
+"@babel/preset-env@^7.0.0":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.4.4.tgz#b6f6825bfb27b3e1394ca3de4f926482722c1d6f"
   integrity sha512-FU1H+ACWqZZqfw1x2G1tgtSSYSfxJLkpaUQL37CenULFARDo+h4xJoVHzRoHbK+85ViLciuI7ME4WTIhFRBBlw==
@@ -1058,6 +1091,14 @@
     invariant "^2.2.2"
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
+
+"@babel/preset-flow@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0.tgz#afd764835d9535ec63d8c7d4caf1c06457263da2"
+  integrity sha512-bJOHrYOPqJZCkPVbG1Lot2r5OSsB+iUOaxiHdlOeB1yPWS6evswVHwvkDLZ54WTaTRIk89ds0iHmGZSnxlPejQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-transform-flow-strip-types" "^7.0.0"
 
 "@babel/preset-react@7.0.0", "@babel/preset-react@^7.0.0":
   version "7.0.0"
@@ -1205,23 +1246,181 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
   integrity sha512-4zAPlpDEh2VwXswwr/t8xGNDGg8RQiPxtxZ3qQEXyQsBV39ptTdESCjuBvGze1nLMVrxmTIKmnO/nAV8Tqjjzg==
 
-"@forrestjs/core@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@forrestjs/core/-/core-0.0.2.tgz#d028a4f9fd6710a9bcf867b5c99320f3939336cf"
-  integrity sha512-o9rokT3Yrw3lppeh11IkuRKdsa642iyB0gXEQxWKxCTN208rAqSXVPKYcC1NQHImuh4w8werUJuZJEx1v0BAMw==
+"@forrestjs/babel-preset-universal@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/babel-preset-universal/-/babel-preset-universal-0.0.63-alpha.0.tgz#5d67e446620ab24dd3e252a717072ce04da6fd95"
+  integrity sha512-k4y/tEly+oWD1bInNdUtaSpppDLRFBykE7tGgXPfQueLNbjhQciUYqhuFNF6o9nxUS4lFdPLui3dA6BTwJonfg==
   dependencies:
+    "@babel/plugin-proposal-class-properties" "^7.0.0"
+    "@babel/plugin-proposal-optional-chaining" "^7.0.0"
+    "@babel/plugin-transform-runtime" "^7.0.0"
+    "@babel/preset-env" "^7.0.0"
+    "@babel/preset-flow" "^7.0.0"
+    "@babel/preset-react" "^7.0.0"
+    babel-plugin-dynamic-import-node-babel-7 "^2.0.7"
+    babel-plugin-module-resolver "^3.2.0"
+    babel-plugin-react-intl "^3.0.1"
+    babel-plugin-styled-components "^1.10.0"
+    babel-plugin-transform-require-ignore "^0.1.1"
+    core-js "3"
+    react-loadable "^5.5.0"
+
+"@forrestjs/core@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/core/-/core-0.0.63-alpha.0.tgz#761160d90046fc1c51f62dfe03102a371abcb1c0"
+  integrity sha512-+D8k522gcQ+rR6M4YagcdmZpa42yKFm6qi3yVwo11AzgjFTnzuCHVp4HWsovjunGCVrIbTd4Wz9SLcB9Rds8bQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
     deep-extend "^0.6.0"
+    express "^4.16.4"
     fs-extra "^7.0.1"
-    gitbook-plugin-code "^0.1.0"
-    gitbook-plugin-collapsible-menu "^1.0.3"
+    history "^4.9.0"
     ignore-styles "^5.0.1"
     md5-file "^4.0.0"
     mime-types "^2.1.24"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    react-helmet "^5.2.1"
+    react-loadable "^5.5.0"
+    react-redux "^7.0.3"
     react-redux-feature "^0.3.4"
     react-router-redux "^4.0.8"
     redux "^4.0.1"
     redux-events-middleware "^1.5.2"
     redux-thunk "^2.3.0"
+
+"@forrestjs/eslint-config-universal@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/eslint-config-universal/-/eslint-config-universal-0.0.63-alpha.0.tgz#cb9a2c35f236d12efad8a0b5aac11744a9071329"
+  integrity sha512-MeYNK5DHd/hBB+NhoOmk7nCMqA0KUYd50O+4XdpD+CL2IbODKY/DHSVYq7rYXWgEu435z4ghXWglwn5tUU/1PQ==
+  dependencies:
+    eslint-config-react "^1.1.7"
+
+"@forrestjs/feature-locale@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/feature-locale/-/feature-locale-0.0.63-alpha.0.tgz#452ed2c72a8d2b0b838972ed33bc147ddd50c4e8"
+  integrity sha512-eU/xDhf1DXB6rL/QMAWRkLCzmvvoRCjk/0UxXR0ia9k0JQMZR3KHfoSEA84BzBs0cr9dNNH3O56jhrCIjqkiNw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@forrestjs/service-express-graphql" "^0.0.63-alpha.0"
+    express-locale "^1.2.0"
+    graphql "^14.3.0"
+    graphql-type-json "^0.3.0"
+    react-intl "^2.8.0"
+
+"@forrestjs/feature-network@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/feature-network/-/feature-network-0.0.63-alpha.0.tgz#f42d4ce245df36698c76577a758ad6893c93b2b6"
+  integrity sha512-uhxJXr0u0x9xiRuOnBNyxUqonPIoguXAjluVbjsM8Jr5gGqY/AdRXihvZh/D4jEq6RklBJZJbtEKATR7QnhZOw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    js-cookie "^2.2.0"
+
+"@forrestjs/feature-storage@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/feature-storage/-/feature-storage-0.0.63-alpha.0.tgz#2428af635704a73054f7b80d107e5c664a800bf3"
+  integrity sha512-pAiTZ/JlmyKr2HDW4kFu+ARD0a1Nec+aB1yG8qy93E+yCUnJX3ph1IW/cIXd2yBmTkXzHhaccwiqsip0zQvUNQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    js-cookie "^2.2.0"
+
+"@forrestjs/package-universal-dev@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/package-universal-dev/-/package-universal-dev-0.0.63-alpha.0.tgz#faac029c787bcec5255186987a2938abef71bf22"
+  integrity sha512-mBXueqUCsazxBxqhmCqaCPYpsnVhh3zXVPP6ZRfLfT/ci+6I6F2pcoGtgZX7Rk/PdAPnzAhTDlgL8Y/xljwSog==
+  dependencies:
+    "@babel/cli" "^7.4.4"
+    "@babel/register" "^7.4.4"
+    "@forrestjs/babel-preset-universal" "^0.0.63-alpha.0"
+    "@forrestjs/eslint-config-universal" "^0.0.63-alpha.0"
+    concurrently "^4.1.0"
+    gitbook-cli "^2.3.2"
+    nodemon "^1.19.0"
+    react-scripts-rewired "3.0.1--latest1"
+    react-styleguidist "^9.0.9"
+
+"@forrestjs/package-universal@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/package-universal/-/package-universal-0.0.63-alpha.0.tgz#d73b1a10fefa2acf000265f6d1503c657325da1c"
+  integrity sha512-7bXf36ULysxkNvhSl5W6ayyayeOf0VoclOtORtCrHcUS7rPgkgc2Ti1aJ94iCfICk+68/8EQKqyHN3Mjflaf8w==
+  dependencies:
+    "@babel/polyfill" "^7.4.4"
+    "@forrestjs/core" "^0.0.63-alpha.0"
+    "@forrestjs/feature-locale" "^0.0.63-alpha.0"
+    "@forrestjs/feature-network" "^0.0.63-alpha.0"
+    "@forrestjs/feature-storage" "^0.0.63-alpha.0"
+    "@forrestjs/service-env" "^0.0.63-alpha.0"
+    "@forrestjs/service-express" "^0.0.63-alpha.0"
+    "@forrestjs/service-express-cookies" "^0.0.63-alpha.0"
+    "@forrestjs/service-express-graphql" "^0.0.63-alpha.0"
+    "@forrestjs/service-express-ssr" "^0.0.63-alpha.0"
+    "@forrestjs/service-logger" "^0.0.63-alpha.0"
+    isomorphic-fetch "^2.2.1"
+    react-router "^5.0.0"
+    react-router-dom "^5.0.0"
+    styled-components "^4.2.0"
+
+"@forrestjs/service-env@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-env/-/service-env-0.0.63-alpha.0.tgz#6375e5d927688ec88dd677d0d30c10b30a34ff8e"
+  integrity sha512-rqUP72dTszMixvuIRYqR0Y1ZyMXzS3jLqpxANn67XDEckdGpxTiU0ZjnG/paTk8TD6FE5/AfhzCrdEXfm9YvGQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@marcopeg/hooks" "^0.2.2"
+    node-env-file "^0.1.8"
+
+"@forrestjs/service-express-cookies@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-express-cookies/-/service-express-cookies-0.0.63-alpha.0.tgz#5bfb297e6a93079e3a40cbf008b32982967a452e"
+  integrity sha512-pvdnVcrk88LmJLckqG0Za2SuczlVqWKjXCd7i6jcCONlpT7j7Xcpo8TnlfOiTDN4dDHgadpLAj+3vAuCpAsg/Q==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@forrestjs/service-express" "^0.0.63-alpha.0"
+    "@marcopeg/hooks" "^0.2.2"
+    cookie-parser "^1.4.4"
+    millisecond "^0.1.2"
+
+"@forrestjs/service-express-graphql@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-express-graphql/-/service-express-graphql-0.0.63-alpha.0.tgz#546d35cc36c51c7c33c4ff6feb5895950263944b"
+  integrity sha512-TAKRf9bzsljkkd56RimvdYtu64zYJ9aOOSaapWEC9e1WzrU6Cm3/o/opROPXtsTvY8Hjlc3q6Xwkose5KvCERQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@forrestjs/service-express" "^0.0.63-alpha.0"
+    "@marcopeg/hooks" "^0.2.2"
+    express-graphql "^0.8.0"
+    graphql "^14.3.0"
+
+"@forrestjs/service-express-ssr@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-express-ssr/-/service-express-ssr-0.0.63-alpha.0.tgz#d5ca6d4e8fd20c0d5111e6a5f55843f5844add18"
+  integrity sha512-duPNK/Z5ReNdKc6scdAEg/3MbAE3UuipCUTNbAmW/QHLtGH38C6BMdv7bug02x8r81vVl7i0RtE5RLbHyZjVog==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@forrestjs/core" "^0.0.63-alpha.0"
+    "@forrestjs/service-express" "^0.0.63-alpha.0"
+    "@marcopeg/hooks" "^0.2.2"
+
+"@forrestjs/service-express@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-express/-/service-express-0.0.63-alpha.0.tgz#ad994ae463711a9d7afefa52e60d4a312c3a3476"
+  integrity sha512-KZjVJfYUyVlm77ZOcJ7Uu1KE45H/Jad2TIKgN/pwoxSm4NkEOox7pUqIAmSHRm0EWpGZbYY0VkvgnsfW8qPrIQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@forrestjs/service-logger" "^0.0.63-alpha.0"
+    "@marcopeg/hooks" "^0.2.2"
+    compression "^1.7.4"
+    express "^4.16.4"
+    helmet "^3.18.0"
+
+"@forrestjs/service-logger@^0.0.63-alpha.0":
+  version "0.0.63-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-logger/-/service-logger-0.0.63-alpha.0.tgz#3dcf3f6a40d249519aee0f9bf3b417f3beefb2f9"
+  integrity sha512-nfcp7qCGjnd2oQptp86rUxg4s67yx7TZu3Lg6xDp62qov9IXSFZMvcDQOzODnDRdur7ozrgrwRCRgRlcyg7oLg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@marcopeg/hooks" "^0.2.2"
+    "@marcopeg/utils" "^2.0.1"
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -3686,7 +3885,7 @@ core-js-pure@3.0.1:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.0.1.tgz#37358fb0d024e6b86d443d794f4e37e949098cbe"
   integrity sha512-mSxeQ6IghKW3MoyF4cz19GJ1cMm7761ON+WObSyLfTu/Jn3x7w4NwNFnrZxgl4MTSvYYepVLNuRtlB4loMwJ5g==
 
-core-js@3.0.1, core-js@^3.0.0:
+core-js@3, core-js@3.0.1, core-js@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.0.1.tgz#1343182634298f7f38622f95e73f54e48ddf4738"
   integrity sha512-sco40rF+2KlE0ROMvydjkrVMMG1vYilP2ALoRXcYR4obqbYIuV3Bg+51GEDW+HF8n7NRA+iaA4qD0nD9lo9mew==
@@ -5659,16 +5858,6 @@ gitbook-cli@^2.3.2:
     tmp "0.0.31"
     user-home "2.0.0"
 
-gitbook-plugin-code@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/gitbook-plugin-code/-/gitbook-plugin-code-0.1.0.tgz#811a9600baef7558ae193cee7d5810001667e97b"
-  integrity sha512-TE8CUFlN7da4SiN2LYx8qk+FX5w2O2IicEcn48sPTpA8gj9qKQqpYpGEdwgsDEev11shEjCZhDwFN//GQ7bdnA==
-
-gitbook-plugin-collapsible-menu@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gitbook-plugin-collapsible-menu/-/gitbook-plugin-collapsible-menu-1.0.3.tgz#6d2765168baaa6599e02d15d78a8a67cc810828b"
-  integrity sha1-bSdlFouqplmeAtFdeKimfMgQgos=
-
 github-slugger@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.2.1.tgz#47e904e70bf2dccd0014748142d31126cfd49508"
@@ -5880,10 +6069,10 @@ graphql-type-json@^0.3.0:
   resolved "https://registry.yarnpkg.com/graphql-type-json/-/graphql-type-json-0.3.0.tgz#bb32e1b74bf52ebc690f9df12b4067bc061f818a"
   integrity sha512-lnxg5HiB95yxy+/5cDKtP6pZo0zgntsOmqsjeCBXFGJ4YoMF3+1YaSEKWJntNTu+VsAm3zf6lPxFpp1kxzofLA==
 
-graphql@^14.2.1:
-  version "14.2.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.2.1.tgz#779529bf9a01e7207b977a54c20670b48ca6e95c"
-  integrity sha512-2PL1UbvKeSjy/lUeJqHk+eR9CvuErXoCNwJI4jm3oNFEeY+9ELqHNKO1ZuSxAkasPkpWbmT/iMRMFxd3cEL3tQ==
+graphql@^14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.3.0.tgz#34dd36faa489ff642bcd25df6c3b4f988a1a2f3e"
+  integrity sha512-MdfI4v7kSNC3NhB7cF8KNijDsifuWO2XOtzpyququqaclO8wVuChYv+KogexDwgP5sp7nFI9Z6N4QHgoLkfjrg==
   dependencies:
     iterall "^1.2.2"
 
@@ -11850,9 +12039,9 @@ resolve@1.10.0, resolve@^1.10.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1,
     path-parse "^1.0.6"
 
 resolve@^1.4.0:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.1.tgz#664842ac960795bbe758221cdccda61fb64b5f18"
-  integrity sha512-KuIe4mf++td/eFb6wkaPbMDnP6kObCaEtIDuHOUED6MNUo4K670KZUHuuvYPZDxNF0WVLw49n06M2m2dXphEzA==
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
+  integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
   dependencies:
     path-parse "^1.0.6"
 
