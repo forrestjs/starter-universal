@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { runQuery } from '@forrestjs/core/features/network'
+import { runQuery } from '@forrestjs/feature-network/client'
 import {
     loadStart,
     loadFailed,

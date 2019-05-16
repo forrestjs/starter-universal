@@ -6,9 +6,9 @@ const reducers = {
 }
 
 const features = [
-    require('@forrestjs/core/features/storage'),
-    require('@forrestjs/core/features/network'),
-    require('@forrestjs/core/features/locale'),
+    require('@forrestjs/feature-storage/client'),
+    require('@forrestjs/feature-network/client'),
+    require('@forrestjs/feature-locale/client'),
     require('features/locale'),
     require('features/pages'),
 ]

@@ -1,7 +1,7 @@
 {
   "name": "forrest-starter-universal",
   "description": "Complete SSR boilerplate: cra, ssr, redux, router, multilanguage, graphql",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "----- // START SCRIPTS // -----": "",
@@ -53,38 +53,14 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
-    "@forrestjs/core": "^0.0.53-alpha.0",
-    "@forrestjs/service-env": "^0.0.53-alpha.0",
-    "@forrestjs/service-logger": "^0.0.53-alpha.0",
-    "@forrestjs/service-express": "^0.0.53-alpha.0",
-    "@forrestjs/service-express-cookies": "^0.0.53-alpha.0",
-    "@forrestjs/service-express-graphql": "^0.0.53-alpha.0",
-    "@forrestjs/service-express-ssr": "^0.0.53-alpha.0",
+    "@forrestjs/package-universal": "^0.0.63-alpha.0",
     "async": "^2.6.2",
     "chokidar": "^3.0.0",
-    "es6-promise": "^4.2.6",
-    "express-locale": "^1.2.0",
     "front-matter": "^3.0.2",
     "glob": "^7.1.4",
-    "graphql-type-json": "^0.3.0",
-    "isomorphic-fetch": "^2.2.1",
-    "js-cookie": "^2.2.0",
-    "react-intl": "^2.8.0",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "remarkable": "^1.7.1",
-    "styled-components": "^4.2.0"
+    "remarkable": "^1.7.1"
   },
   "devDependencies": {
-    "@forrestjs/babel-preset-universal": "^0.0.53-alpha.0",
-    "@forrestjs/eslint-config-universal": "^0.0.53-alpha.0",
-    "react-scripts-rewired": "3.0.1--latest1",
-    "@babel/cli": "^7.4.4",
-    "@babel/register": "^7.4.4",
-    "concurrently": "^4.1.0",
-    "gitbook-cli": "^2.3.2",
-    "nodemon": "^1.19.0",
-    "react-styleguidist": "^9.0.9"
+    "@forrestjs/package-universal-dev": "^0.0.63-alpha.0"
   }
 }
