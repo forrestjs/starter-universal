@@ -41,8 +41,6 @@ registerAction({
     handler: async ({ settings }) => {
         settings.express = {
             ssr: {
-                disableJs: 'yes',
-                useCache: 'no',
                 // multilanguage cache policy
                 shouldCache: (req) => (req.query.locale === undefined),
                 getCacheKey: (req) => ({ value: [ req.url, req.locale.language, req.locale.region ] }),
