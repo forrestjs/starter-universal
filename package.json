@@ -44,7 +44,24 @@
     "heroku:logs": "heroku logs --tail"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "@forrestjs/eslint-config-universal"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "/docs/**/*",
+    "/pages/**/*",
+    "/public/**/*",
+    "/build/**/*",
+    "/build-src/**/*",
+    "/build-ssr/**/*",
+    "/build-locale/**/*"
+  ],
+  "babel": {
+    "presets": [
+      "@forrestjs/babel-preset-universal"
+    ]
   },
   "browserslist": [
     ">0.2%",

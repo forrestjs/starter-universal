@@ -1,5 +1,0 @@
-{
-    "extends": [
-        "@forrestjs/eslint-config-universal"
-    ]
-}
