@@ -1246,10 +1246,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
   integrity sha512-4zAPlpDEh2VwXswwr/t8xGNDGg8RQiPxtxZ3qQEXyQsBV39ptTdESCjuBvGze1nLMVrxmTIKmnO/nAV8Tqjjzg==
 
-"@forrestjs/babel-preset-universal@^0.0.37-alpha.0":
-  version "0.0.37-alpha.0"
-  resolved "https://registry.yarnpkg.com/@forrestjs/babel-preset-universal/-/babel-preset-universal-0.0.37-alpha.0.tgz#939910a301d1151ae82f845d333f27b0439f1fe9"
-  integrity sha512-FcbMbnY1gTCMqdCOIg6WHuLJ0SKsUySwuxFNEBXpNKp/ssVP6qpoLXsnOG7OTP4H5a9+FklQ6U58rRP+iywzVw==
+"@forrestjs/babel-preset-universal@^0.0.39-alpha.0":
+  version "0.0.39-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/babel-preset-universal/-/babel-preset-universal-0.0.39-alpha.0.tgz#ae477df2c08ec6f869ec3f63d2dfdcd5040ae529"
+  integrity sha512-L3UkfFSw4/FmoXQDhqyvwi/dX1R8OBDHAgESAAgWNCSN8EIG/0jjm9SJ3lpSDvlb8uVH//whscYD4MTzSZlsgQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0"
     "@babel/plugin-proposal-optional-chaining" "^7.0.0"
@@ -1282,6 +1282,13 @@
     redux "^4.0.1"
     redux-events-middleware "^1.5.2"
     redux-thunk "^2.3.0"
+
+"@forrestjs/eslint-config-universal@^0.0.39-alpha.0":
+  version "0.0.39-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/eslint-config-universal/-/eslint-config-universal-0.0.39-alpha.0.tgz#c465b28dba8f831ef17862faf6e618b2e3af6c00"
+  integrity sha512-fRmIv7klVc/azY9eeD6AInKJqshWyjF4eQhkmRxsNJ6TLpvY9cAe2YTZCL18Kf5nc0+zXLXGNH37+0686y1gGA==
+  dependencies:
+    eslint-config-react "^1.1.7"
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -11910,9 +11917,9 @@ resolve@1.10.0, resolve@^1.10.0, resolve@^1.3.2, resolve@^1.5.0, resolve@^1.8.1,
     path-parse "^1.0.6"
 
 resolve@^1.4.0:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.1.tgz#664842ac960795bbe758221cdccda61fb64b5f18"
-  integrity sha512-KuIe4mf++td/eFb6wkaPbMDnP6kObCaEtIDuHOUED6MNUo4K670KZUHuuvYPZDxNF0WVLw49n06M2m2dXphEzA==
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
+  integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
   dependencies:
     path-parse "^1.0.6"
 

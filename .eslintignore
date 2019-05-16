@@ -1,4 +1,11 @@
+# non source folders
 node_modules
-build
-build-src
-build-ssr
+/docs/**/*
+/pages/**/*
+/public/**/*
+
+# build artifacts
+/build/**/*
+/build-src/**/*
+/build-ssr/**/*
+/build-locale/**/*
