@@ -1296,6 +1296,15 @@
   dependencies:
     eslint-config-react "^1.1.7"
 
+"@forrestjs/service-env@^0.0.42-alpha.0":
+  version "0.0.42-alpha.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/service-env/-/service-env-0.0.42-alpha.0.tgz#4fe5d1c22c12cc0f1d6089df5ee645fc3e0d9376"
+  integrity sha512-+Ya5fBhzqy8t79KZzNnwieo01Pn0aNOCJhRUsiJWT0ykQ97OjaE59+rrfnMKyeTrVpueVgtzdEIhd9OZxkDxpw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@marcopeg/hooks" "^0.2.2"
+    node-env-file "^0.1.8"
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
