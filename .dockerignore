@@ -1,9 +1,6 @@
 # gitignored folders
 node_modules
-build
-build-src
-build-ssr
-build-locale
+node_build
 
 # other stuff
 Makefile

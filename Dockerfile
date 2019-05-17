@@ -13,38 +13,31 @@
 # if we touch the `package.json` file. Which doesn't happen so often.
 #
 
-FROM node:10.14-alpine AS builder
+FROM node:12.2-alpine AS builder
 
 # NPM Install for building
 WORKDIR /usr/src/app-build
-ADD package.json /usr/src/app-build/package.json
-RUN npm install
-
-# NPM Install for production
-WORKDIR /usr/src/app-run
-ADD package.json /usr/src/app-run/package.json
-RUN npm install --only=production
+ADD package.json /usr/src/app-build
+ADD yarn.lock /usr/src/app-build
+RUN yarn install
 
 # Copy source files:
 WORKDIR /usr/src/app-build
-ADD index.js /usr/src/app-build
-ADD .babelrc /usr/src/app-build
 ADD .env /usr/src/app-build
 ADD jsconfig.json /usr/src/app-build
 ADD webpack.config.extend.js /usr/src/app-build
-ADD webpackDevServer.config.extend.js /usr/src/app-build
-
-# Build backend
-WORKDIR /usr/src/app-build
 ADD ssr /usr/src/app-build/ssr
-RUN npm run build:ssr
-
-# Build frontend
-WORKDIR /usr/src/app-build
 ADD src /usr/src/app-build/src
-RUN npm run build:src
 ADD public /usr/src/app-build/public
-RUN ./node_modules/.bin/react-scripts build
+ADD index.js /usr/src/app-build
+
+# Build:
+WORKDIR /usr/src/app-build
+RUN yarn build
+RUN yarn build:node
+
+# Remove dev dependencies
+RUN npm prune --production
 
 
 
@@ -59,14 +52,12 @@ RUN ./node_modules/.bin/react-scripts build
 # the idea is to keep this image as small as possible.
 #
 
-FROM node:10.14-alpine AS runner
+FROM node:12.2-alpine AS runner
 
-# Copy assets for build:
+# Copy project specific assets:
 WORKDIR /usr/src/app
-COPY --from=builder /usr/src/app-run/node_modules ./node_modules
-COPY --from=builder /usr/src/app-build/build ./build
-COPY --from=builder /usr/src/app-build/build-src ./build-src
-COPY --from=builder /usr/src/app-build/build-ssr ./build-ssr
+COPY --from=builder /usr/src/app-build/node_modules ./node_modules
+COPY --from=builder /usr/src/app-build/node_build ./node_build
 ADD package.json /usr/src/app
 ADD index.js /usr/src/app
 ADD .env /usr/src/app
