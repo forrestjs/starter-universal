@@ -35,7 +35,7 @@
     "book:publish": "npm run book:install && npm run book:build && git add ./docs && git commit -m \"gitbook\" && git push",
     "book": "npm run book:install && npm run book:serve",
     "----- // HEROKU UTILITIES // -----": "",
-    "heroku-postbuild": "npm run build:all",
+    "heroku-postbuild": "npm run build",
     "heroku:deploy": "git push heroku master",
     "heroku:logs": "heroku logs --tail"
   },
