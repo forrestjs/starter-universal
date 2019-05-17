@@ -8,8 +8,6 @@ name?=forrest-starter-universal
 # Docker image tag name
 tag?=${name}
 
-
-
 # Build the project using cache
 image:
 	docker build -t ${tag} .
@@ -48,3 +46,35 @@ ssh:
 		-it \
 		${name} \
 		/bin/sh
+
+###
+### Use Docker for development
+### ==========================
+###
+
+dev:
+	docker run \
+		--rm \
+		--name "${name}-dev" \
+		-v $(shell pwd)/node_build/docker/node_modules:/usr/src/app/node_modules:cached \
+		-v $(shell pwd)/node_build/docker/node_build:/usr/src/app/node_build:cached \
+		-v $(shell pwd)/package.json:/usr/src/app/package.json:delegated \
+		-v $(shell pwd)/yarn.lock:/usr/src/app/yarn.lock:delegated \
+		-v $(shell pwd)/jsconfig.json:/usr/src/app/jsconfig.json:delegated \
+		-v $(shell pwd)/src:/usr/src/app/src:delegated \
+		-v $(shell pwd)/ssr:/usr/src/app/ssr:delegated \
+		-v $(shell pwd)/public:/usr/src/app/public:delegated \
+		-v $(shell pwd)/index.dev.js:/usr/src/app/index.dev.js:delegated \
+		-v $(shell pwd)/.env:/usr/src/app/.env:delegated \
+		-v $(shell pwd)/pages:/usr/src/app/pages:delegated \
+		-p 8080:8080 \
+		-p 3000:3000 \
+		-w /usr/src/app \
+		node:12.2 \
+		yarn dev:docker
+
+build:
+	docker exec -it "${name}-dev" yarn build
+
+build-locale:
+	docker exec -it "${name}-dev" yarn build:locale
