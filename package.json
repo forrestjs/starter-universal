@@ -5,20 +5,20 @@
   "private": true,
   "scripts": {
     "----- // CRA DEFAULT SCRIPTS // -----": "",
-    "start": "npm run clean && npm run build && NODE_ENV=production node index",
+    "start": "npm run clean && npm run build && cross-env NODE_ENV=production node index",
     "build": "npm run build:app && npm run build:node",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint .",
     "----- // START SCRIPTS // -----": "",
-    "start:api": "npm run build:node && NODE_ENV=production node index",
+    "start:api": "npm run build:node && cross-env NODE_ENV=production node index",
     "start:cra": "react-scripts start",
-    "start:dev": "./node_modules/.bin/concurrently \"npm run start:dev:api\" \"npm run start:cra\"",
-    "start:dev:api": "NODE_ENV=development nodemon --watch ssr -e js --watch build index.js",
+    "start:dev": "yarn && ./node_modules/.bin/concurrently \"npm run start:dev:api\" \"npm run start:cra\"",
+    "start:dev:api": "yarn && cross-env NODE_ENV=development nodemon --watch ssr -e js --watch build index.js",
     "----- // BUILD SCRIPTS // -----": "",
-    "build:app": "react-scripts build && mkdir -p node_build && rm -rf ./node_build/build && mv build node_build",
-    "build:src": "NODE_ENV=production ./node_modules/.bin/babel src --out-dir node_build/src --copy-files",
-    "build:ssr": "NODE_ENV=production ./node_modules/.bin/babel ssr --out-dir node_build/ssr",
+    "build:app": "react-scripts build && mkdir -p node_build && rm -rf ./node_build/app && mv build node_build/app",
+    "build:src": "cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir node_build/src --copy-files",
+    "build:ssr": "cross-env NODE_ENV=production ./node_modules/.bin/babel ssr --out-dir node_build/ssr",
     "build:locale": "npm run build:src && node ./node_modules/@forrestjs/core/lib/react-intl-pack.js",
     "build:node": "npm run build:src && npm run build:ssr",
     "----- // CLEANING SCRIPTS // -----": "",
@@ -26,8 +26,8 @@
     "clean": "rm -rf node_build && rm -rf build",
     "reset": "npm run clean && npm run clean:npm",
     "----- // STYLEGUIDIST UTILITIES // -----": "",
-    "styleguide": "BABEL_ENV=development ./node_modules/.bin/styleguidist server",
-    "styleguide:build": "BABEL_ENV=development./node_modules/.bin/styleguidist build",
+    "styleguide": "./node_modules/.bin/styleguidist server",
+    "styleguide:build": "./node_modules/.bin/styleguidist build",
     "----- // GITBOOK UTILITIES // -----": "",
     "book:install": "node_modules/.bin/gitbook install",
     "book:serve": "node_modules/.bin/gitbook serve",
@@ -66,7 +66,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@forrestjs/package-universal": "^0.1.1",
+    "@forrestjs/package-universal": "^0.1.3",
     "async": "^2.6.2",
     "chokidar": "^3.0.0",
     "es6-promise": "^4.2.6",
@@ -75,6 +75,6 @@
     "remarkable": "^1.7.1"
   },
   "devDependencies": {
-    "@forrestjs/package-universal-dev": "^0.1.1"
+    "@forrestjs/package-universal-dev": "^0.1.3"
   }
 }

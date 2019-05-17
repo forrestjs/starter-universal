@@ -9,6 +9,7 @@
 /coverage
 /node_build
 /build
+/.docker-volumes
 
 # report
 npm-debug.log*
