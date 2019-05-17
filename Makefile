@@ -8,6 +8,14 @@ name?=forrest-starter-universal
 # Docker image tag name
 tag?=${name}
 
+
+
+
+###
+### Use Docker for Production
+### =========================
+###
+
 # Build the project using cache
 image:
 	docker build -t ${tag} .
@@ -47,17 +55,21 @@ ssh:
 		${name} \
 		/bin/sh
 
+
+
+
 ###
-### Use Docker for development
+### Use Docker for Development
 ### ==========================
 ###
 
 dev:
 	docker run \
+		-it \
 		--rm \
 		--name "${name}-dev" \
-		-v $(shell pwd)/node_build/docker/node_modules:/usr/src/app/node_modules:cached \
-		-v $(shell pwd)/node_build/docker/node_build:/usr/src/app/node_build:cached \
+		-v $(shell pwd)/node_modules/.docker-volume/node_modules:/usr/src/app/node_modules:cached \
+		-v $(shell pwd)/node_modules/.docker-volume/node_build:/usr/src/app/node_build:cached \
 		-v $(shell pwd)/package.json:/usr/src/app/package.json:delegated \
 		-v $(shell pwd)/yarn.lock:/usr/src/app/yarn.lock:delegated \
 		-v $(shell pwd)/jsconfig.json:/usr/src/app/jsconfig.json:delegated \
@@ -71,7 +83,7 @@ dev:
 		-p 3000:3000 \
 		-w /usr/src/app \
 		node:12.2 \
-		yarn dev:docker
+		yarn install && yarn start:dev
 
 build:
 	docker exec -it "${name}-dev" yarn build
