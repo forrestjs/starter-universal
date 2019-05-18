@@ -14,7 +14,7 @@
     "start:api": "npm run build:node && cross-env NODE_ENV=production node index",
     "start:cra": "react-scripts start",
     "start:dev": "yarn && ./node_modules/.bin/concurrently \"npm run start:dev:api\" \"npm run start:cra\"",
-    "start:dev:api": "yarn && cross-env NODE_ENV=development nodemon --watch ssr -e js --watch build index.js",
+    "start:dev:api": "yarn && cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js",
     "----- // BUILD SCRIPTS // -----": "",
     "build:app": "react-scripts build && mkdir -p node_build && rm -rf ./node_build/app && mv build node_build/app",
     "build:src": "cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir node_build/src --copy-files",
