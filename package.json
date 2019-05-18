@@ -14,7 +14,7 @@
     "start:api": "npm run build:node && cross-env NODE_ENV=production node index",
     "start:cra": "react-scripts start",
     "start:dev": "yarn && ./node_modules/.bin/concurrently \"npm run start:dev:api\" \"npm run start:cra\"",
-    "start:dev:api": "yarn && cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js",
+    "start:dev:api": "cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js",
     "----- // BUILD SCRIPTS // -----": "",
     "build:app": "react-scripts build && mkdir -p node_build && rm -rf ./node_build/app && mv build node_build/app",
     "build:src": "cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir node_build/src --copy-files",
@@ -66,7 +66,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@forrestjs/package-universal": "^2.4.0",
+    "@forrestjs/package-universal": "^2.4.1",
     "async": "^2.6.2",
     "chokidar": "^3.0.0",
     "es6-promise": "^4.2.6",
@@ -75,6 +75,6 @@
     "remarkable": "^1.7.1"
   },
   "devDependencies": {
-    "@forrestjs/package-universal-dev": "^2.4.0"
+    "@forrestjs/package-universal-dev": "^2.4.1"
   }
 }
