@@ -1,2 +1,2 @@
-import { FEATURE } from '@marcopeg/hooks'
+import { FEATURE } from '@forrestjs/hooks'
 export const FEATURE_NAME = `${FEATURE} pages`

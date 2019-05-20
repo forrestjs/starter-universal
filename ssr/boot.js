@@ -7,8 +7,8 @@
  * to think in features and organize your codebase around your real
  * business requirements instead ;-)
  */
-import { registerAction, SETTINGS, FINISH } from '@marcopeg/hooks'
-import { createHookApp, logBoot } from '@marcopeg/hooks'
+import { registerAction, SETTINGS, FINISH } from '@forrestjs/hooks'
+import { createHookApp, logBoot } from '@forrestjs/hooks'
 
 
 /**

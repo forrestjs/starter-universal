@@ -1,6 +1,6 @@
 import path from 'path'
 import express from 'express'
-import { START_FEATURES } from '@marcopeg/hooks'
+import { START_FEATURES } from '@forrestjs/hooks'
 import { EXPRESS_MIDDLEWARE } from '@forrestjs/service-express'
 import { EXPRESS_GRAPHQL } from '@forrestjs/service-express-graphql'
 import { FEATURE_NAME } from './hooks'
