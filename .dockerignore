@@ -1,15 +1,16 @@
 # gitignored folders
-node_modules
-node_build
+/node_modules
+/node_build
+.docker-volumes
 
 # other stuff
-Makefile
-README.md
-SUMMARY.md
-LICENCE.md
-package-lock.json
-_book
-docs
+/Makefile
+/README.md
+/SUMMARY.md
+/LICENCE.md
+/package-lock.json
+/_book
+/docs
 
 # local environment files
 .env.local
