@@ -1,5 +1,9 @@
 # forrest-starter-universal
 
+[![CircleCI](https://circleci.com/gh/forrestjs/starter-universal/tree/master.svg?style=svg)](https://circleci.com/gh/forrestjs/starter-universal/tree/master)
+![GitHub issues](https://img.shields.io/github/issues-raw/forrestjs/starter-universal.svg)
+![GitHub stars](https://img.shields.io/github/stars/forrestjs/starter-universal.svg?style=social)
+
 Before you start reading, take a look at the running app that you get by
 cloning this repository:
 
