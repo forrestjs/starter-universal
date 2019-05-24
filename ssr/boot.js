@@ -77,7 +77,6 @@ process.env.NODE_ENV === 'development' && registerAction({
  * queries in a feature implementing one or more hooks.
  */
 export default createHookApp({
-    settings: {},
     services: [
         require('@forrestjs/service-env'),
         require('@forrestjs/service-logger'),
