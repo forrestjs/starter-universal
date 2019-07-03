@@ -20,8 +20,8 @@ export const register = ({ registerAction }) => {
         hook: EXPRESS_MIDDLEWARE,
         name: FEATURE_NAME,
         trace: __filename,
-        handler: ({ app }) => {
-            app.use('/media', express.static(path.join(process.cwd(), 'pages', 'media')))
+        handler: ({ registerMiddleware }) => {
+            registerMiddleware('/media', express.static(path.join(process.cwd(), 'pages', 'media')))
         },
     })
 
@@ -29,9 +29,9 @@ export const register = ({ registerAction }) => {
         hook: EXPRESS_GRAPHQL,
         name: FEATURE_NAME,
         trace: __filename,
-        handler: ({ queries }) => {
-            queries.listPages = require('./queries/list-pages.query').default
-            queries.getPage = require('./queries/get-page.query').default
+        handler: ({ registerQuery }) => {
+            registerQuery('listPages', require('./queries/list-pages.query').default)
+            registerQuery('getPage', require('./queries/get-page.query').default)
         },
     })
 }

@@ -38,14 +38,12 @@ require('isomorphic-fetch')
 registerAction({
     hook: SETTINGS,
     name: '♦ boot',
-    handler: async ({ settings }) => {
-        settings.express = {
-            ssr: {
-                // multilanguage cache policy
-                shouldCache: (req) => (req.query.locale === undefined),
-                getCacheKey: (req) => ({ value: [ req.url, req.locale.language, req.locale.region ] }),
-            },
-        }
+    handler: async ({ setConfig }) => {
+        setConfig('expressSSR', {
+            // multilanguage cache policy
+            shouldCache: (req) => (req.query.locale === undefined),
+            getCacheKey: (req) => ({ value: [ req.url, req.locale.language, req.locale.region ] }),
+        })
     },
 })
 
