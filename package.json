@@ -71,7 +71,7 @@
     "es6-promise": "^4.2.8",
     "front-matter": "^3.0.2",
     "glob": "^7.1.4",
-    "remarkable": "^2.0.0"
+    "remarkable": "^1.7.1"
   },
   "devDependencies": {
     "@forrestjs/package-universal-dev": "3.5.0"
