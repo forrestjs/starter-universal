@@ -70,6 +70,12 @@ module.exports = {
      * out of the box!
      *
      * The trick is to simply provide this configuration back to Styleguidist.
+     *
+     * NOTE: extending the "devServer" will enable access from any host.
+     * This is required if you plan to run the devServer on NGROK or simial tools.
      */
-    webpackConfig: require('react-scripts-rewired/config/webpack.config.dev.extend'),
+    webpackConfig: {
+        ...require('react-scripts-rewired/config/webpack.config.dev.extend'),
+        // devServer: { disableHostCheck: true },
+    },
 }

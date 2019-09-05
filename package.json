@@ -65,7 +65,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@forrestjs/package-universal": "3.5.0",
+    "@forrestjs/package-universal": "3.7.0",
     "async": "^3.1.0",
     "chokidar": "^3.0.2",
     "es6-promise": "^4.2.8",
@@ -74,6 +74,6 @@
     "remarkable": "^1.7.1"
   },
   "devDependencies": {
-    "@forrestjs/package-universal-dev": "3.5.0"
+    "@forrestjs/package-universal-dev": "3.7.0"
   }
 }
